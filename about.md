@@ -4,11 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Hello, I'am Tom-Hu, a student from CAUC,SIAE. I'am trying to change the world by using technologies.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+My academic mayjor focus on avionics, DeepLearning NLP&CV.
+I'am interested in the RC Model, the flight too.
 
 ### Contact me
 
