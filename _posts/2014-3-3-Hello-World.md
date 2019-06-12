@@ -2,5 +2,4 @@
 layout: post
 title: Hello World!
 ---
-# Thanks to MicroSoft
-# Thanks to Github
+# Hello, I'm Tom-Hu.
