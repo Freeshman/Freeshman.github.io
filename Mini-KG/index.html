@@ -1,0 +1,84 @@
+<!doctype html>
+<meta charset="UTF-8"> <!-- for HTML5 -->
+<html>
+
+<head>
+    <title>Mini-知识图谱</title>
+    <link rel="stylesheet" type="text/css" href="jquery.qtip.css">
+
+    <script src="cytoscape.min.js"></script>
+    <script src="datas.js"></script>
+    <!-- <script src="datas2.js"></script> -->
+
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="jquery.qtip.js"></script>
+    <script src="cytoscape-qtip.js"></script>
+    <script src="lodash.js"></script>
+    <script src="cytoscape-edgehandles.js"></script>
+    <script src="ChangeDatas.js"></script>
+    <script src="function.js"></script>
+    <script src="cytoscape-automove.js"></script>
+
+</head>
+
+<style>
+    body{
+        background-color: white;
+        
+        background:url("bg.png") no-repeat fixed center;
+        background-size:400px 200px; 
+        /*background-size:contain;*/
+    }
+    #cy {
+        width: 100%;
+        height: 95%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    #SearchBox {
+        position: absolute;
+        bottom: 2%;
+        right: 2%;
+        max-width: 30em;
+        border: solid;
+        border-color: gray;
+        padding: 0.5em;
+}
+
+    #information {
+        min-width: 30em;
+        min-height: 5em;
+        max-width: 50%;
+        max-height: 80%;
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        border: solid;
+        border-color: gray;
+		font-size:12px;
+        /*display:flex;*/
+        justify-content:center;
+}
+        
+/*        display:block;
+        float:left;*/
+    }
+
+</style>
+
+<body>
+    <!-- <h1 style="float:left; text-align: center;margin: 30px">适航审定知识图谱</h1> -->
+    
+    <div id="cy" style="margin: 5px;"></div>
+	<div id="information"></div>
+    <div id="SearchBox">
+        <a> 搜索:</a><br>
+        <input type="Keyword" id="Keyword" value="关键词">
+        <input type="button" id='Search' value='查找'>
+        <br>
+        <a id='Suggestion'> 查找看看</a><br>
+    </div>
+</body>
+
+</html>
