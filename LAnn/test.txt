@@ -1,0 +1,5 @@
+Linux下配置web服务器
+1.简介
+目前WEB服务器有Apache和Nginx两种，两种WEB服务器都是用于处理静态HTML的请求。为了处理动态的PHP文件，首先下载好PHP服务器，然后需要分别对两个WEB服务器进行设置：
+
+Apache需要下载libapache-mod-php Nginx需要在配置文件中将对PHP文件的访问转发给CGI服务器 下面分别对两种服务器及其对PHP的支持配置过程进行描述。
