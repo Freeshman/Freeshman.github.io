@@ -331,9 +331,6 @@ input,button{
     var triple_relation_classfy_list=[];
     var tokens_2_server="";
     var tokesn_2_server_index_s=-1;
-
-    var blob_back={};
-
 window.onresize = function(){
     refresh();
 }
@@ -1565,10 +1562,9 @@ function refresh(){
     // console.log(spo_global.length);//debug
     for (var i = 0; i<spo_global.length; i++) {
       if(spo_global[i][0]=='关')continue;//跳过隐含关系
-      if(parseInt(spo_global[i])>=parseInt(all_spos_loaded[current_sample_index][0][0])&&spo_global[i]<(lists.length+parseInt(all_spos_loaded[current_sample_index][0][0]))){//位于当前页
-        // console.log(spo_global[i],all_spos_loaded[current_sample_index][0][0],lists.length)//debug
-            render_rectangle(start_end_index(total_char_index_2_relative_index(spo_global[i])[1],labels_current[current_sample_index]),i);
-        }
+      var page_index = total_char_index_2_relative_index(parseInt(spo_global[i]));
+      if(page_index[0]==current_sample_index)
+         render_rectangle(start_end_index(page_index[1],labels_current[current_sample_index]),i);
     }
 }
 
@@ -1587,7 +1583,7 @@ function add_entity(){
       start_end=start_end_index(current_char_index,labels_current[current_sample_index]);
       if(start_end[1]==-1&&(start_end[0]+1)<all_samples_loaded[current_sample_index].length)//快速选中两个字符
         start_end[1]=start_end[0]+1;
-      else return;
+    else if(start_end[1]==-1&&(start_end[0]+1)>=all_samples_loaded[current_sample_index].length) return;
     for(var i=start_end[0];i<=start_end[1];i++)txtselected+=all_samples_loaded[current_sample_index][i];  
     
       // ####else for(var i=start_end[0];i<=start_end[1];i++)txtselected+=all_samples_loaded[current_sample_index][i];
